@@ -1,4 +1,6 @@
-﻿ #define _CRT_SECURE_NO_WARNINGS
+﻿//  让编译器忽略 标准C语言提供的方法 进而达到程序正常运行
+// 永远放在 源文件的第一行
+#define _CRT_SECURE_NO_WARNINGS
 // # 指令形式  include 是包含  stdio.h这个文件 
 //  stdio.h  标准输入输出的文件
 #include <stdio.h>

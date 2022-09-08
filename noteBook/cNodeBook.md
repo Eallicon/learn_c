@@ -73,3 +73,44 @@ eg:  sizeof(int) sizeof(char)
 
 局部变量的生命周期 是进入作用域开始 出作用域结束 <br/>
 全局变量的生命周期 整个程序的生命周期
+
+
+
+### scanf 与 scanf_s
+ - scanf 是标准C语言提供的
+ - scanf_s 是编译器提供的 这样就不具有跨平台性 、 可移植性 
+
+### scanf strcpy srtlen strcat 
+
+
+```
+#define _CRT_SECURE_NOWARNINGS 
+当代码本身无措的时候 用于忽略编译器的报错
+
+
+例如 scanf  是标准c语言  scanf_s 则是vs提供的C语言形式 
+```
+
+# 常量 变量
+
+  区别
+ 
+## 常量
+
+  文字常量 <br/>
+  使用 const 可以 修饰 变量 为 常变量 本质还是变量 <br/>
+  #define 定义的标识符常量 <br/>
+  枚举常量 <br/>
+
+  ``` type c#
+        10;// 字面常量
+        const int max = 1; // 常变量
+        #define MAX 10; // 标识符常量
+        // 枚举关键字  enum 
+        enum Sex
+        {
+            MALE,
+            FEMALE,
+            SECRET
+        };
+  ```
