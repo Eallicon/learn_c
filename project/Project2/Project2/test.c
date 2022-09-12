@@ -4,19 +4,25 @@
 #include <string.h>
 
 
-//Î»ÒÆ²Ù×÷·û
 
-int main() {
-	//<< ×óÒÆ
-	//>> ÓÒÒÆ
-	int a = 1;
-	int left = a << 1;
-	int right =  a>>2 ;
-	printf("%d\n", a);
-	printf("%d\n", right);
+ 
 
-	return 0;
-}
+
+
+
+////Î»ÒÆ²Ù×÷·û
+//
+//int main() {
+//	//<< ×óÒÆ
+//	//>> ÓÒÒÆ
+//	int a = 1;
+//	int left = a << 1;
+//	int right =  a>>2 ;
+//	printf("%d\n", a);
+//	printf("%d\n", right);
+//
+//	return 0;
+//}
 
 
 //Êı×é
