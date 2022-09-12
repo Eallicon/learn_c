@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\Code\Ccode\project\Project2\Project2\test.c(12,23): warning C4013: “strlen”未定义；假设外部返回 int
   Project2.vcxproj -> D:\Code\Ccode\project\Project2\Debug\Project2.exe
