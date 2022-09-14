@@ -4,16 +4,30 @@
 #include <string.h>
 
 
-//声明全局函数 引入全局函数 
-extern int add(int, int);
 
 int main() {
-	int a = 10;
-	int b = 20;
-	int c = add(a, b);
-	printf("sum  = %d\n", c);
+
+	int a = 10; 
+	int* p = &a; //指针变量  指针变量P存放的是 变量 a 所在地址
+	printf("%d\n", a);
+	printf("%p\n", p);  // 输出指针变量使用 %p 去输出
+	*p = 30; // * 表示的是解引用 把指针变量p 所对应地址的值替换为 30 
+	printf("%d\n", a);
+
 	return 0;
 }
+
+
+////声明全局函数 引入全局函数 
+//extern int add(int, int);
+//
+//int main() {
+//	int a = 10;
+//	int b = 20;
+//	int c = add(a, b);
+//	printf("sum  = %d\n", c);
+//	return 0;
+//}
 
 //
 //int main() {
