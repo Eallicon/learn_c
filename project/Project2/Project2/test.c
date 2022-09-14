@@ -1,11 +1,49 @@
-#define _CRT_SECURE_NO_WARNINGS 
+#define _CRT_SECURE_NO_WARNINGS // 忽略非安全保护 例如 scanf_s  
 #include <stdio.h>
 // str函数的头文件  只要使用srt函数就需要导入
 #include <string.h>
 
 
+//声明全局函数 引入全局函数 
+extern int add(int, int);
 
- 
+int main() {
+	int a = 10;
+	int b = 20;
+	int c = add(a, b);
+	printf("sum  = %d\n", c);
+	return 0;
+}
+
+//
+//int main() {
+//	extern int all_val;
+//	printf("all_val = %d\n", all_val);
+//	//全局静态变量  改变了全局变量的作用 让静态的全局变量只能在自己所在源文件可以使用    
+//	//extern int all_val_static;
+//	//printf("all_val_static = %d\n", all_val_static);
+//	return 0;
+//}
+
+
+
+//void test() {
+//	//静态局部变量 
+//	static int a = 1;
+//	a++;
+//	printf("a = %d\n", a);
+//}
+//
+//int main() {
+//	int i = 0;
+//	
+//	while (i < 5) {
+//		test();
+//		i++;
+//	}
+//
+//	return 0;
+//}
 
 
 

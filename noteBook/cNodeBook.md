@@ -63,7 +63,9 @@ eg:  sizeof(int) sizeof(char)
 
 就是变量的合法使用的作用域 <br/>
 
-**extern** 生命外部的变量 也就是说只要在全局的变量都可以使用 extern 关键字 获取到
+**extern** 生命外部的变量 也就是说只要在全局的变量都可以使用 extern 关键字 获取到  
+
+引入 全局变量
 
  <br/>
 
@@ -157,3 +159,114 @@ eg:  sizeof(int) sizeof(char)
 负数的反码  在 *原码* 的基础上  符号位不变 数值位取反
 
 负数的补码  在 *反码* 的基础上 符号位不变 数值位加 1
+
+## 常见关键字 
+auto  break  case  char  const continue default do 
+
+double else  enum extern float for if int log register(寄存器)
+
+return short signed sizeof static struct switch typedef 
+
+union unsigned void volatile while
+
+ - register(寄存器) 建议把变量定义成寄存器变量 
+ - int 定义的变量 是有符号的  
+ - signed 有符号数 
+ - unsigned 无符号数
+ - union 联合体（共用体）
+ - volatile !!!!
+
+### typedef 类型定义 类型重定义 
+用于重新定义类型 或者交重新给类型添加别名 
+
+例如 创建一个 无符号整形 需要 unsigned int 2个单词  以后使用也很麻烦
+
+那就可以使用 typedef 去设置别名进行 使用   typedef unsigned int u_int 这样就可以使用 u_int 表示 无符号整形了
+
+```
+
+typedef unsigned int u_int;
+
+unsigned int num = 20;
+
+u_int num2 = 10;
+
+这里的 num 与 num2 的类型是一样的 
+
+```
+
+### static 是修饰变量与函数的  静态的 私有的!
+
+被静态修饰符 修饰的变量修饰的变量 在进入这函数的时候不会销毁 下次进入上次的依旧保存
+
+ - 修饰局部变量 --- 局部静态变量
+
+        局部变量的生命周期延长了！ 也就是出了局部作用域后不销毁了！
+
+ - 修饰全局变量 --- 全局静态变量
+
+        改变了全局变量的作用域 让静态的全局变量只能在自己所在源文件可以使用    
+
+ - 修饰函数 --- 静态函数
+
+       改变了全局函数的作用域 让静态的全局函数只能在自己所在源文件可以使用 ----> 不准确 ！
+
+       改变了函数的 **链接属性**  
+
+       普通函数具有外部**链接属性** 当被 static 修饰的时候 这个函数的外部**链接属性**就变味了内部**链接属性**
+
+```
+// 这里的 a 输出结果 是 2 3 4 5 6
+// 当 a 不被 static 修饰的时候  输出结果 是  1 1 1 1 1 
+void test() {
+	//静态局部变量 
+	static int a = 1;
+	a++;
+	printf("a = %d\n", a);
+}
+
+int main() {
+	int i = 0;
+	
+	while (i < 5) {
+		test();
+		i++;
+	}
+
+	return 0;
+}
+```
+
+
+
+### 常量 与 宏  define 
+
+ - 常量
+
+    #define MAX 10 // 这个MAX 就是常量 10 
+
+ - 宏  带参数的
+
+    #define MAX(X,Y) (X>Y?X:Y)  这就是个宏 实现的是比较2个数的大小 调用方式与函数一致
+
+
+
+```
+
+//  标识符常量
+#define MAX 10 // 这个MAX 就是常量 10 
+// 宏  声明
+#define MAX(X,Y) (X>Y?X:Y)
+// 调用
+int max = MAX(10,20)
+
+```
+
+
+
+## 指针
+
+### 内存
+
+
+
